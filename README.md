@@ -44,7 +44,7 @@ LED Azul      → GPIO 27
 LED Amarelo   → GPIO 26
 ```
 
-## 🌡️ Parâmetros de Monitoramento
+## Parâmetros de Monitoramento
 
 ### Temperatura
 - **Ideal**: 18°C - 20°C

@@ -1,9 +1,11 @@
-Sistema de Monitoramento de Temperatura e Umidade para Museu 
+# Sistema de Monitoramento de Temperatura e Umidade para Museu 🏛️
 
 Sistema embarcado baseado em ESP32 para monitoramento em tempo real de condições ambientais, desenvolvido para preservação de acervos em ambientes museológicos.
+
 ### Grupo
   - Amanda Freire
   - Valentina Lago
+
 ## 📋 Sobre o Projeto
 
 Este projeto implementa um sistema completo de monitoramento e controle de temperatura e umidade utilizando ESP32 e sensor DHT11. O sistema oferece interface web responsiva, registro de eventos históricos e sistema de alarmes automático para proteção de acervos.

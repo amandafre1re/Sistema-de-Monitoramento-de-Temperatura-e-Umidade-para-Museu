@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sistema de Monitoramento de Museus</title>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"><img src="img/628058.png" alt="Logo pucpr"></div>
+                <h1>Monitoramento de Museus</h1>
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#dashboard" class="active nav-link" data-tab="dashboard">Dashboard</a></li>
+                    <li><a href="#controles_led" class="nav-link" data-tab="controles_led">Controles</a></li>
+                    <li><a href="#tempo" class="nav-link" data-tab="tempo">Tempo de Funções</a></li>
+                    <li><a href="#historico" class="nav-link" data-tab="historico">Histórico</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        
+        <section id="dashboard" class="tab-content active">
+            <h2>Monitoramento em Tempo Real</h2>
+            <p class="last-update">Última atualização: <span id="update-time">--:--:--</span></p>
+            
+            <div class="dashboard-grid">
+                <div class="card sensor-card">
+                    <h3>🌡️ Temperatura</h3>
+                    <div class="sensor-value sensor-temperature" id="temperature-value">-- °C</div>
+                    <div class="sensor-status" id="temperature-status">Aguardando próxima leitura...</div>
+                </div>
+                
+                <div class="card sensor-card">
+                    <h3>💧 Umidade</h3>
+                    <div class="sensor-value sensor-humidity" id="humidity-value">-- %</div>
+                    <div class="sensor-status" id="humidity-status">Aguardando próxima leitura...</div>
+                </div>
+            </div>
+        <div class="card status-card">
+            <h3>🚥 Status da Temperatura</h3>
+            <div id="status-temperatura" class="status-text">Aguardando próxima leitura...</div>
+        </div>
+         <div class="card status-card">
+            <h3>🚥 Status da Umidade</h3>
+            <div id="status-umidade" class="status-text">Aguardando próxima leitura...</div>
+        </div>
+
+<div class="card modo-master">
+    <h3>⚙️ Modo de Operação</h3>
+    
+    <div class="modo-info">
+        <p><strong>Modo Atual:</strong> <span id="modo-text" class="modo-atual">Automático</span></p>
+        <p class="modo-description" id="modo-description">
+            Sistema opera automaticamente baseado nos sensores.
+        </p>
+    </div>
+    
+    <button class="btn-alternar-modo" id="btnAlterarModo">
+        Alternar para Modo Manual
+    </button>
+</div>
+
+<div class="modo-e-wifi">
+    <div class="card controles-wrapper" id="controles_led">
+        <h3>Controles</h3>
+        
+        <div class="controles-desabilitados" id="controles-overlay">
+            <p>⚠️ Ative o Modo Manual para usar os controles</p>
+        </div>
+
+        <div class="controle-item">
+            <span><strong>Buzzer:</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="btnToggleBuzzer">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="controle-item">
+            <span><strong>LED Vermelho:</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="btnToggleLed">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="controle-item">
+            <span><strong>LED Azul:</strong></span>
+            <label class="switch">
+                <input type="checkbox" id="btnToggleLedAzul">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </div>
+
+</div>
+
+
+            <!-- Painel de tempos -->
+            <div class="tempo-e-wifi">
+                <div class="card" id="tempo">
+                    <h3>⏰ Tempos de Funções</h3>
+                    <p>Δ Leitura Sensor: <span id="tSensor">--</span></p>
+                    <p>Δ Conectar com Servidor: <span id="tUmid">--</span></p>
+                    <p>Δ Ligar Alarme: <span id="tLigar">--</span></p>
+                    <p>Δ Desligar Alarme: <span id="tDesligar">--</span></p>
+                </div>
+
+                <div class="card sensor-card wifi-card" id="wifi-card">
+                    <h3>📶 Sinal Wi-Fi</h3>
+                    <div class="wifi-status" id="wifi-status">Aguardando...</div>
+                    <div class="wifi-rssi" id="wifi-rssi">-- dBm</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Histórico -->
+        <section id="historico" class="tab-content">
+            <div class="card">
+                <div class="history-controls">
+                    <h3>🗓️ Histórico de Dados</h3>
+                    <div class="date-filter">
+
+                    </div>
+                
+                </div>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Área de Log</th>
+                        </tr>
+                    </thead>
+                    <tbody id="history-data">
+                        <tr>
+                            <td colspan="4" style="text-align: center;">Carregando os dados...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <div class="container footer-content">
+            <div class="system-status">
+                <div class="status-indicator status-online"></div>
+                <span>Sistema Online</span>
+            </div>
+            <div>
+                <span>Grupo 03 - Dispositivos de Monitoramento de Museus</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

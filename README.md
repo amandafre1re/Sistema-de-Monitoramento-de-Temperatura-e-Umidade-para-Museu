@@ -6,7 +6,7 @@ Sistema embarcado baseado em ESP32 para monitoramento em tempo real de condiçõ
   - Amanda Freire
   - Valentina Lago
 
-## 📋 Sobre o Projeto
+##  Sobre o Projeto
 
 Este projeto implementa um sistema completo de monitoramento e controle de temperatura e umidade utilizando ESP32 e sensor DHT11. O sistema oferece interface web responsiva, registro de eventos históricos e sistema de alarmes automático para proteção de acervos.
 
@@ -21,7 +21,7 @@ Este projeto implementa um sistema completo de monitoramento e controle de tempe
 - ✅ Indicadores LED para diferentes estados do sistema
 - ✅ Sincronização de horário via NTP
 
-## 🔧 Hardware Utilizado
+##  Hardware Utilizado
 
 ### Componentes Principais
 
